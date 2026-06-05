@@ -1,0 +1,94 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PUBLICATIONS — all papers. Most recent first within each year.
+#
+# Required: id, year, month (1–12), venue, title, authors, description
+# Optional: type (conference|workshop|journal|preprint), selected (true/false),
+#           award: short text shown as a gold badge next to "Selected"
+#                  (e.g. "Best Paper Award", "Oral", "Best Paper Candidate"),
+#           links: [{ label, icon, url }],
+#           teaser: path to a teaser image (4:3 crops best). Put the file in
+#                   public/assets/papers/ and reference it WITHOUT the "public/"
+#                   prefix, e.g. assets/papers/p1.jpg. Omit it to show a placeholder.
+#                   (Paths are case-sensitive on the deploy server.)
+#           bibtex: text copied by the "BibTeX" button. If omitted, an entry is
+#                   auto-generated from the fields above. To override, use a block:
+#                     bibtex: |
+#                       @inproceedings{key2026,
+#                         title = {...},
+#                         author = {First Last and Second Author},
+#                         booktitle = {...},
+#                         year = {2026}
+#                       }
+#
+# `selected: true` makes the paper eligible for the home page "Selected work"
+# section. Among selected pubs, the top 3 by year DESC then month DESC are shown.
+#
+# Use ${name} and ${advisor} in `authors` to auto-substitute from profile.yaml
+# (so changes there propagate automatically).
+#
+# `icon` values: doc, code, external
+# ─────────────────────────────────────────────────────────────────────────────
+
+- id: p1
+  year: 2026
+  month: 6
+  venue: CVPRW
+  type: conference
+  selected: true
+  award: "Best Paper Award"   # optional badge next to "Selected"; e.g. Oral, Best Paper Candidate. Remove if not applicable.
+  teaser: assets/papers/p1.jpg   # optional 4:3 teaser image (file goes in public/assets/papers/)
+  title: "DanceNet3D: A 3D Dance Dataset with Multi-View Videos and 3DGS Reconstructions"
+  authors: ["Shihang Wei", "Mingjian Li", "Ran Gong", "Yueyu Hu", "Yao Wang"]
+  description: "A synchronized multi-view dance dataset captured with 29 cameras, comprising 47 sequences and over 35,000 frames of diverse dance styles by 4 professional dancers that releases high quality per frame 3DGS reconstructions"
+  # Citation copied by the "BibTeX" button. Edit freely — this is the source of truth.
+  bibtex: |
+    @inproceedings{wei2026dancenet3d,
+      title     = {DanceNet3D: A 3D Dance Dataset with Multi-View Videos and 3DGS Reconstructions},
+      author    = {Wei, Shihang and Li, Mingjian and Gong, Ran and Hu, Yueyu and Wang, Yao},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+      year      = {2026},
+      note      = {Equal contribution: Shihang Wei and Mingjian Li}
+    }
+  links:
+    # Add a `url:` to make a link clickable (opens in a new tab). Delete links you don't have yet.
+    - { label: PDF,     icon: doc,      url: "https://openaccess.thecvf.com/content/CVPR2026W/3DMV/papers/Wei_DanceNet3D_A_3D_Dance_Dataset_with_Multi-View_Videos_and_3DGS_CVPRW_2026_paper.pdf"}
+    - { label: Code,    icon: code,     url: "https://github.com/NYUVideoLab/dancenet3d-processing-pipeline"}
+    - { label: Dataset, icon: external, url: "https://huggingface.co/datasets/nyuvideolab/danceNet3D" }
+
+# - id: p2
+#   year: 2025
+#   month: 10
+#   venue: ICCV
+#   type: conference
+#   selected: true
+#   title: "[Placeholder Title] Self-Supervised Video Understanding with Temporal Consistency"
+#   authors: ["${name}", "[Co-author A]", "${advisor}"]
+#   description: "A second placeholder summary. Mention the dataset, benchmark, or downstream task you improved on."
+#   links:
+#     - { label: PDF,  icon: doc }
+#     - { label: Code, icon: code }
+
+# - id: p3
+#   year: 2025
+#   month: 12
+#   venue: NeurIPS Workshop
+#   type: workshop
+#   selected: false
+#   title: "[Placeholder Title] Workshop Paper on [Topic]"
+#   authors: ["${name}", "[Co-author]"]
+#   description: "Short workshop-paper description. Useful for early-stage work."
+#   links:
+#     - { label: PDF, icon: doc }
+
+# - id: p4
+#   year: 2024
+#   month: 9
+#   venue: ECCV
+#   type: conference
+#   selected: true
+#   title: "[Placeholder Title] Earlier Work on Visual Recognition"
+#   authors: ["[First Author]", "${name}", "${advisor}"]
+#   description: "Earlier collaboration. Describe your specific contribution if you were not lead author."
+#   links:
+#     - { label: PDF,  icon: doc }
+#     - { label: Code, icon: code }

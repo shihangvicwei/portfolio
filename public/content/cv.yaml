@@ -1,0 +1,82 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CV — Curriculum Vitae sections.
+#
+# Each top-level key is a section. Each section has:
+#   - title: shown as the section heading
+#   - items: list of { when, where, what, note? }
+#
+# `skills` is a special section rendered as a multi-line block.
+#
+# Order of keys here = order on the page.
+# ─────────────────────────────────────────────────────────────────────────────
+
+education:
+  title: Education
+  items:
+    - when: "2025 –"
+      where: Purdue University
+      what: "Ph.D., Computer Science"
+      note: "[Advised by Fengqing Maggie Zhu. Working on [research area].]"
+    - when: "[Year]"
+      where: "[Undergraduate university]"
+      what: "B.S., [Major]"
+      note: "[GPA, honors, thesis title — fill in.]"
+
+experience:
+  title: Experience
+  items:
+    - when: "[Summer 2026]"
+      where: "[Company / lab]"
+      what: Research Intern
+      note: "[Placeholder description of what you worked on.]"
+    - when: "[Year]"
+      where: "[Company / lab]"
+      what: "[Role]"
+      note: "[Placeholder description.]"
+
+awards:
+  title: Awards
+  items:
+    - when: "[Year]"
+      where: "[Granting institution]"
+      what: "[Award name]"
+    - when: "[Year]"
+      where: "[Conference]"
+      what: "[Award name]"
+
+teaching:
+  title: Teaching
+  items:
+    - when: "[Term]"
+      where: Purdue
+      what: "[Course code] · [TA / Instructor]"
+
+# Service — hidden for now. Uncomment to show it on the CV page and Research page.
+# service:
+#   title: Service
+#   items:
+#     - when: "2025 –"
+#       where: "[Conference]"
+#       what: Reviewer
+
+# Talks shown on the Research page (also editable here for one source of truth).
+# talks:
+#   title: Talks
+#   items:
+    # - when: "Nov 2025"
+    #   where: "[Venue / Lab]"
+    #   what: Invited talk
+    # - when: "Jun 2025"
+    #   where: "[Conference 2025]"
+    #   what: Oral presentation
+
+# Free-form skills block. Each line is rendered with bold heading + description.
+skills:
+  title: Skills
+  lines:
+    - heading: Languages
+      text: "Python, C++, [other]"
+    - heading: Frameworks
+      text: "PyTorch, JAX, [other]"
+    - heading: Other
+      text: "[LaTeX, distributed training, etc.]"

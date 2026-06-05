@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PROFILE — single source of truth for identity, contact, social, sidebar.
+# Edit this file to update name, title, email, advisor, "currently" block, etc.
+# Do not touch any .jsx / .css files — the website reads everything from here.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Shihang Wei
+nameZh: 魏诗航
+title: PhD Student
+institution: Purdue University
+institutionShort: Purdue
+field: Computer Vision
+copyright: "© 2026 Shihang Wei"
+
+# Contact
+email: shihang.wei@purdue.edu
+# office: "[building, room]"
+location: West Lafayette, IN
+advisor: Fengqing Maggie Zhu
+advisorUrl: https://engineering.purdue.edu/~zhu0/
+
+# Social — leave as "#" if you don't have one (link will still appear; remove
+# the line above the icon in profile-links if you want it hidden entirely).
+scholar: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=6sqBIDkAAAAJ"
+github: https://github.com/potatwei
+linkedin: https://www.linkedin.com/in/shihangweivictor
+instagram: https://www.instagram.com/vicccww/
+
+# Lede on the About/home page (the headline above your bio)
+# Use *italic* markers to wrap the emphasized phrase. Plain text otherwise.
+lede: "I reconstruct *people and scenes in 3D* from images."
+
+# Bio paragraphs shown below the lede on the About/home page.
+bioParagraphs:
+  - "My research interests are in 3D and 4D reconstruction, with a focus on building solid, high-fidelity dynamic 3D/4D models efficiently. I am especially interested in approaches that can reduce reconstruction time while preserving quality and reducing the model storage size, whether through feed-forward methods, per-scene optimization, or hybrid systems. More broadly, I am excited about 3D Gaussian Splatting, multi-view video, and dynamic scene representation."
+
+# Sidebar "Currently" block (label/value pairs)
+currently:
+  - label: Working on
+    value: Human 3D reconstruction
+  - label: Based in
+    value: West Lafayette, IN
+
+# Curriculum Vitae PDF (optional). When set, a "Download PDF" button appears on
+# the CV page linking here. Drop the file in public/assets/ and reference it as
+# assets/cv.pdf. Leave empty ("") to hide the button.
+cvPdf: ""
+
+# Footer
+lastUpdated: April 2026

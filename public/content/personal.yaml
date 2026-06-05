@@ -1,0 +1,115 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PERSONAL — content for the Personal page (photography + hiking tabs).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Top of page
+hero:
+  volume: "Vol. 01 · 2026"
+  display1: "Beyond"
+  display2: "the lab."          # the word "the" will be rendered italic
+  lede: "[Placeholder: a sentence or two about why these matter to you. Two practices that fit together — one with a camera, one on foot — and what they give back to the research.]"
+
+# ─── Photography tab ─────────────────────────────────────────────────────────
+# Each set can be defined two ways:
+#
+#  A) PLACEHOLDER MODE (current default)
+#     Uses generated colored tiles. Specify `images` (count) + `aspects` (one
+#     ratio per image; same length as count).
+#
+#  B) REAL-PHOTO MODE
+#     Replace `images` + `aspects` with `photos:` — a list of items.
+#     The simplest form is just a list of `src:` paths — aspect ratios are
+#     measured automatically from the image files:
+#       photos:
+#         - { src: assets/personal/desert/01.jpg }
+#         - { src: assets/personal/desert/02.jpg }
+#         - { src: assets/personal/desert/03.jpg }
+#       cover: assets/personal/desert/hero.jpg
+#
+#     Optionally pin an `aspect:` per photo to force a layout ratio
+#     (useful for cropping):
+#         - { src: .../foo.jpg, aspect: 1.5 }
+#
+# `aspects` cheat sheet: 1.5 = landscape (3:2), 0.667 = portrait (2:3),
+# 1 = square, 1.778 = widescreen (16:9).
+#
+# Drop image files into assets/personal/<set-id>/ and reference them by path.
+photography:
+  - id: desert
+    title: Desert
+    where: White Sands, NM
+    date: "2025"
+    images: 8
+    aspects: [1.5, 1.5, 0.667, 1.5, 1, 1.5, 0.667, 1.5]
+    caption: "[Placeholder caption: a few sentences about the place, the light, the camera you carried, what you were looking for.]"
+
+  - id: city
+    title: After hours
+    where: Chicago, IL
+    date: "2025"
+    images: 12
+    aspects: [0.667, 1.5, 0.667, 0.667, 1.5, 1, 0.667, 1.5, 0.667, 1.5, 0.667, 1.5]
+    caption: "[Placeholder caption: night walks, neon, long exposures.]"
+
+  - id: midwest
+    title: Midwest winter
+    where: Indiana
+    date: "2025"
+    images: 6
+    aspects: [1.5, 1.5, 0.667, 1.5, 1.778, 1.5]
+    caption: "[Placeholder caption: the quiet of February, frozen fields, low sky.]"
+
+  - id: studio
+    title: Portraits
+    where: Lafayette, IN
+    date: "2024"
+    images: 10
+    aspects: [0.667, 0.667, 1, 0.667, 0.667, 1.5, 0.667, 0.667, 1, 0.667]
+    caption: "[Placeholder caption: friends, lab mates, anyone willing to sit for me.]"
+
+# Pull-quote shown in the magazine spread (uses set #2)
+photoQuote: "[Placeholder pull quote about photography — something short and specific. Two short lines.]"
+
+# ─── Hiking tab ──────────────────────────────────────────────────────────────
+# Each trip: { id, name, range, distance (mi), elev (ft), date, where, note }
+# Optional `duration` (hrs) — shown on the featured (first) trip's stat block.
+# Optional `image:` — path to a photo for that trip's tile, e.g.
+#   image: assets/personal/hikes/01.jpg
+# The first trip's image also fills the big featured panoramic at top.
+hiking:
+  - id: 1
+    name: "[Trail name]"
+    range: "[Mountain range]"
+    distance: "12.4"
+    elev: "3,200"
+    duration: "6.5"
+    date: Aug 2025
+    where: "[State, country]"
+    note: "[Placeholder: a short paragraph on the trail — what made it memorable, who you went with, the weather.]"
+
+  - id: 2
+    name: "[Trail name]"
+    range: "[Park name]"
+    distance: "8.1"
+    elev: "1,800"
+    date: Jul 2025
+    where: "[State]"
+    note: "[Placeholder note.]"
+
+  - id: 3
+    name: "[Trail name]"
+    range: "[Park name]"
+    distance: "17.2"
+    elev: "4,500"
+    date: Jun 2025
+    where: "[State]"
+    note: "[Placeholder note.]"
+
+  - id: 4
+    name: "[Trail name]"
+    range: "[Park name]"
+    distance: "5.6"
+    elev: "900"
+    date: May 2025
+    where: "[State]"
+    note: "[Placeholder note.]"

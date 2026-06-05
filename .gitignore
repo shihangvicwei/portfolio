@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+.vite
+*.log
+
+# Claude Code — local-only, do not publish
+CLAUDE.md
+.claude/
+
+# Claude Design handoff artifacts (do not commit)
+scraps/
+screenshots/
+uploads/

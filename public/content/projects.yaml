@@ -1,0 +1,13 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# PROJECTS — research projects, code releases, datasets shown on the
+# Research page under "Projects & code".
+#
+# Required: title, blurb, tags
+# Optional: href (makes the title a clickable external link)
+# ─────────────────────────────────────────────────────────────────────────────
+
+- title: DanceNet3D dataset
+  blurb: "Synchronized multi-view dance dataset — 28–29 calibrated cameras, 46 sequences, 36k+ frames, with per-frame COLMAP calibration, foreground masks, and sparse point clouds."
+  tags: [dataset, 3D reconstruction, multi-view]
+  href: https://huggingface.co/datasets/nyuvideolab/danceNet3D
+

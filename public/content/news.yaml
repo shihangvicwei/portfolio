@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# NEWS — most recent first.
+# Each entry: { date, text }. Optional `link` adds an inline highlighted link
+# to the matching token in `text` (case-sensitive substring).
+#
+# Example with a link:
+#   - date: Apr 2026
+#     text: "Our dataset DanceNet3D was published."
+#     link:
+#       label: DanceNet3D
+#       url: https://huggingface.co/datasets/nyuvideolab/danceNet3D
+# ─────────────────────────────────────────────────────────────────────────────
+
+- date: Aug 2026
+  text: "Joinning Purdue's ECE PhD program, working with Professor Fengqing Maggie Zhu."
+
+- date: Jun 2026
+  text: "Received the Best Paper Award at the 3DMV Workshop at CVPR 2026 for DanceNet3D."
+  link:
+    label: DanceNet3D
+    url: https://huggingface.co/datasets/nyuvideolab/danceNet3D
+
+- date: Jun 2026
+  text: "Presented our DanceNet3D dataset poster at the 3DMV workshop, CVPR 2026."
+  link:
+    label: DanceNet3D
+    url: https://huggingface.co/datasets/nyuvideolab/danceNet3D
+
+- date: May 2026
+  text: "Received my BS in Computer Science from NYU Tandon SOE."
+
+- date: Apr 2026
+  text: "Our dataset DanceNet3D was published — huge thanks to my research advisor Yao Wang for her guidance throughout the project."
+  link:
+    label: DanceNet3D
+    url: https://huggingface.co/datasets/nyuvideolab/danceNet3D
