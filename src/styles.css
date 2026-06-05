@@ -332,15 +332,18 @@ button { font-family: inherit; }
 }
 @media (max-width: 880px) {
   .home-grid { grid-template-columns: 1fr; gap: 48px; }
-  /* Stacked layout: un-stick the sidebar so it scrolls with the page
-     instead of pinning over the bio/news content. */
-  .profile-aside { position: static; top: auto; }
 }
 .profile-aside {
   position: sticky;
   /* Match natural starting offset (nav 74.7px + page padding-top 64px ≈ 140px)
      so the sidebar pins instantly with zero scroll drift. */
   top: 140px;
+}
+/* Stacked layout: un-stick the sidebar so it scrolls with the page instead of
+   pinning over the bio/news content. Must come AFTER the base rule above —
+   equal specificity, so source order decides which wins at <=880px. */
+@media (max-width: 880px) {
+  .profile-aside { position: static; top: auto; }
 }
 .profile-photo {
   width: 100%;
