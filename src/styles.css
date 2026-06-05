@@ -162,6 +162,11 @@ a { color: inherit; }
 /* ---------- Layout ---------- */
 .page { max-width: 1180px; margin: 0 auto; padding: 64px 32px 120px; }
 .page-narrow { max-width: 840px; margin: 0 auto; padding: 64px 32px 120px; }
+/* Phones: reclaim horizontal space and tighten top padding. */
+@media (max-width: 600px) {
+  .page, .page-narrow { padding: 40px 20px 96px; }
+  .nav-inner { padding: 16px 20px; }
+}
 
 .hero-eyebrow {
   font-family: var(--mono);
@@ -327,6 +332,9 @@ button { font-family: inherit; }
 }
 @media (max-width: 880px) {
   .home-grid { grid-template-columns: 1fr; gap: 48px; }
+  /* Stacked layout: un-stick the sidebar so it scrolls with the page
+     instead of pinning over the bio/news content. */
+  .profile-aside { position: static; top: auto; }
 }
 .profile-aside {
   position: sticky;
