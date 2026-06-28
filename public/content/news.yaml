@@ -2,6 +2,7 @@
 # NEWS — most recent first.
 # Each entry: { date, text }. Optional `link` adds an inline highlighted link
 # to the matching token in `text` (case-sensitive substring).
+# Wrap any phrase in **double asterisks** to render it bold.
 #
 # Example with a link:
 #   - date: Apr 2026
@@ -15,7 +16,7 @@
   text: "Joinning Purdue's ECE PhD program, working with Professor Fengqing Maggie Zhu."
 
 - date: Jun 2026
-  text: "Received the Best Paper Award at the 3DMV Workshop at CVPR 2026 for DanceNet3D."
+  text: "Received the *Best Paper Award* at the 3DMV Workshop at CVPR 2026 for DanceNet3D."
   link:
     label: DanceNet3D
     url: https://huggingface.co/datasets/nyuvideolab/danceNet3D

@@ -30,23 +30,37 @@ function parseLedeMarkdown(s) {
   });
 }
 
-// For news entries: render text with optional inline link substitution.
+// Convert "**bold** text" to an array of strings / <strong> nodes.
+function renderBold(s, keyPrefix) {
+  if (!s) return [];
+  const parts = s.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+  return parts.map((p, i) => {
+    if (p.startsWith('**') && p.endsWith('**') && p.length > 4) {
+      return React.createElement('strong', { key: `${keyPrefix}${i}` }, p.slice(2, -2));
+    }
+    return p;
+  });
+}
+
+// For news entries: render **bold** markers plus an optional inline link.
 function renderNewsText(entry) {
-  if (!entry.link || !entry.link.label) return entry.text;
-  const { label, url } = entry.link;
-  const idx = entry.text.indexOf(label);
-  if (idx === -1) return entry.text;
-  const before = entry.text.slice(0, idx);
-  const after = entry.text.slice(idx + label.length);
+  const text = entry.text || '';
+  const { label, url } = entry.link || {};
+  const idx = label ? text.indexOf(label) : -1;
+  if (idx === -1) {
+    return React.createElement(React.Fragment, null, ...renderBold(text, 't'));
+  }
+  const before = text.slice(0, idx);
+  const after = text.slice(idx + label.length);
   return React.createElement(React.Fragment, null,
-    before,
+    ...renderBold(before, 'a'),
     React.createElement('a', {
       className: 'news-link',
       href: url,
       target: '_blank',
       rel: 'noopener noreferrer',
     }, label),
-    after,
+    ...renderBold(after, 'c'),
   );
 }
 
