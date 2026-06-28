@@ -1,0 +1,1 @@
+This is Shihang Wei(魏诗航). My portfolio is at https://shihangvicwei.github.io/portfolio/. I'm a PhD student @ Purdue University advised by Professor Fengqing Maggie Zhu and I earned my BS degree @ NYU Tandon advised by Professor Yao Wang.
