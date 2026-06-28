@@ -30,6 +30,17 @@ function parseLedeMarkdown(s) {
   });
 }
 
+// Let a single bioParagraphs string hold several paragraphs: a blank line in
+// the YAML (double-quoted or folded `>` style) folds to "\n", so split on
+// newlines to break one entry into multiple <p>. Trims and drops empties.
+function splitParagraphs(paras) {
+  if (!Array.isArray(paras)) return paras;
+  return paras
+    .flatMap(p => String(p).split(/\n+/))
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
 // Convert "**bold** text" to an array of strings / <strong> nodes.
 function renderBold(s, keyPrefix) {
   if (!s) return [];
@@ -110,7 +121,7 @@ export async function loadContent() {
   };
 
   return {
-    profile: { ...profile, ledeNodes: parseLedeMarkdown(profile.lede) },
+    profile: { ...profile, ledeNodes: parseLedeMarkdown(profile.lede), bioParagraphs: splitParagraphs(profile.bioParagraphs) },
     news: news.map(n => ({ ...n, node: renderNewsText(n) })),
     publications: interpolate(publications, vars).map(p => ({ ...p, bibtex: p.bibtex || toBibtex(p) })),
     projects,

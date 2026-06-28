@@ -32,11 +32,13 @@ instagram: https://www.instagram.com/vicccww/
 lede: "I reconstruct *people and scenes in 3D* from images."
 
 # Bio paragraphs shown below the lede on the About/home page.
+# A blank line inside one entry starts a new paragraph; you can also use one
+# list item per paragraph. Both render as separate <p>.
 bioParagraphs:
   - "My research interests are in 3D and 4D reconstruction, with a focus on building solid, high-fidelity dynamic 3D/4D 
   models efficiently. I am especially interested in approaches that can reduce reconstruction time while preserving 
   quality and reducing the model storage size, whether through feed-forward methods, per-scene optimization, or hybrid 
-  systems. More broadly, I am excited about 3D Gaussian Splatting, multi-view video, and dynamic scene representation.
+  systems.
   
   I also love photography and hiking, check out my instagram to see my lastest work.
   "
