@@ -10,7 +10,8 @@ title: PhD Student
 institution: Purdue University
 institutionShort: Purdue
 field: Computer Vision
-copyright: "© 2026 Shihang Wei"
+# Footer copyright "© <year> <name>" and "Last updated <month year>" are generated
+# automatically from the last git commit date (see vite.config.js) — nothing to edit.
 
 # Contact
 email: shihang.wei@purdue.edu
@@ -45,6 +46,3 @@ currently:
 # the CV page linking here. Drop the file in public/assets/ and reference it as
 # assets/cv.pdf. Leave empty ("") to hide the button.
 cvPdf: ""
-
-# Footer
-lastUpdated: April 2026

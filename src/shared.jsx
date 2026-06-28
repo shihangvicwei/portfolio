@@ -128,12 +128,17 @@ export function Nav({ route, go }) {
   );
 }
 
+// __LAST_UPDATED__ is replaced at build time by Vite (vite.config.js) with the
+// ISO date of the last git commit, so the footer auto-updates on every commit.
+const BUILD_DATE = new Date(__LAST_UPDATED__);
+
 export function Footer() {
   const { profile } = useContent();
-  const lastUpdated = profile.lastUpdated || '';
+  const year = BUILD_DATE.getFullYear();
+  const lastUpdated = BUILD_DATE.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
   return (
     <footer className="footer">
-      {profile.copyright} · Built with <a href="https://github.com/xyjoey/PRISM" target="_blank" rel="noopener noreferrer">PRISM</a>
+      © {year} {profile.name} · Built with <a href="https://github.com/xyjoey/PRISM" target="_blank" rel="noopener noreferrer">PRISM</a>
       <span className="footer-sep">·</span>
       <span className="footer-updated">Last updated {lastUpdated}</span>
     </footer>
