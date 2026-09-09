@@ -7,7 +7,13 @@ import './styles.css';
 
 loadContent()
   .then(content => {
-    createRoot(document.getElementById('root')).render(
+    const el = document.getElementById('root');
+    // #root ships with a static, crawlable copy of the page baked in at build
+    // time (scripts/prerender.mjs). createRoot() replaces container children on
+    // first render anyway, but clear it explicitly so the swap can never depend
+    // on that implicit behaviour.
+    el.innerHTML = '';
+    createRoot(el).render(
       <StrictMode>
         <ContentProvider value={content}>
           <App />
